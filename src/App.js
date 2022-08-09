@@ -1,4 +1,10 @@
 import "./styles.css";
+import styled from "styled-components";
+import items from "./data/items";
+
+import Dropdown from "react-bootstrap/Dropdown";
+
+const Heading = styled.h1``;
 
 export default function App() {
   const items = [
@@ -42,9 +48,19 @@ export default function App() {
 
   return (
     <div className="App">
-      <h2>Roster</h2>
+      <Heading>Roster</Heading>
+      <Dropdown />
+      <Dropdown.Toggle variant="success" id="dropdown-basic">
+        Select team
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        <Dropdown.Item href="#/action-1">red</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">yellow</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">red</Dropdown.Item>
+      </Dropdown.Menu>
       {items
-        ? items.map((item) => (
+        ? items?.map((item) => (
             <p key={item.id}>
               {item.name} - {item.age} years old
             </p>

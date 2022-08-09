@@ -1,4 +1,4 @@
-default export const items = [
+export const items = [
   {
     id: 1,
     name: "Niels",
@@ -34,5 +34,20 @@ default export const items = [
     name: "Anita",
     team: "red",
     age: 25
+  }
+];
+
+export const stuff = [
+  {
+    id: 1,
+    name: "Guitar",
+    price: 2000,
+    age: 33
+  },
+  {
+    id: 2,
+    name: "Car",
+    price: 10000,
+    age: 10
   }
 ];
